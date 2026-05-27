@@ -156,6 +156,7 @@ RENOMBRE_INDIVIDUOS = {
 
 # Renombrado de columnas de la hoja Principal -> encabezados de Hábitat.
 RENOMBRE_PRINCIPAL = {
+    'ID_Sitio_0': 'CODIGO(NUEVO)',
     'sitio': 'Estación',
     'fecha': 'Fecha',
     'dia': 'Día',
@@ -532,7 +533,7 @@ def exportar_habitat(df_principal_ren):
         lambda x: MESES_ES.get(str(x).strip(), x) if pd.notna(x) else pd.NA)
     df_base['Cod2019'] = df_base.get('ID_Sitio', pd.NA)
 
-    id_vars = [c for c in ['Fecha', 'Día', 'Mes', 'Año', 'Estación', 'Cod2019']
+    id_vars = [c for c in ['Fecha', 'Día', 'Mes', 'Año', 'Estación', 'Cod2019', 'CODIGO(NUEVO)']
                if c in df_base.columns]
     cols_datos = [col for col in VARIABLES_HABITAT.values() if col in df_base.columns]
     cols_display = {col: name for name, col in VARIABLES_HABITAT.items() if col in df_base.columns}
@@ -563,7 +564,7 @@ def exportar_habitat(df_principal_ren):
         'NOMBRE DE VARIABLE', 'VARIABLE', 'VALOR', 'VALOR AJUSTADO', 'OBSERVACIÓN', 'OBSERVACIÓN AJUSTADA',
     ]
     for c in ['Letra(campaña)', 'Ambiente', 'Campaña', 'MOMENTO', 'Profundidad_',
-              'CODIGO(ANTES)', 'CODIGO(NUEVO)', 'VALOR AJUSTADO', 'OBSERVACIÓN', 'OBSERVACIÓN AJUSTADA']:
+              'CODIGO(ANTES)', 'VALOR AJUSTADO', 'OBSERVACIÓN', 'OBSERVACIÓN AJUSTADA']:
         df_full[c] = pd.NA
     df_full['VARIABLE'] = df_full['NOMBRE DE VARIABLE']
 
