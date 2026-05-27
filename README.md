@@ -1,3 +1,5 @@
+![alt text](pipeline.png)
+
 # Monitoreo ictiológico — XLSForm (KoboToolbox) e ingesta de datos
 
 Este repositorio contiene:
