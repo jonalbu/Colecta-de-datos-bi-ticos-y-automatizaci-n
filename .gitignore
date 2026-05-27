@@ -1,0 +1,20 @@
+# Ignorar todo por defecto
+*
+
+# Permitir entrar a las carpetas (necesario para des-ignorar su contenido)
+!*/
+
+# Archivos que SÍ se publican
+!.gitignore
+!README.md
+!requirements.txt
+!LICENSE
+
+# Plantilla anónima de ingesta (sin datos confidenciales)
+!ingestar_BD_template.py
+!ingestar_BD_template.ipynb
+
+# Formulario XLSForm de captura (plantilla, sin datos confidenciales)
+!XLSForm_Kobotools/M_ictico.xlsx
+!Plantilla_Habitat.xlsx
+
