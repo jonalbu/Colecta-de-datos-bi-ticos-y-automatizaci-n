@@ -9,6 +9,7 @@
 !README.md
 !requirements.txt
 !LICENSE
+!pipelines.png
 
 # Plantilla anónima de ingesta (sin datos confidenciales)
 !ingestar_BD_template.py
